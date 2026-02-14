@@ -1,0 +1,487 @@
+/* Global Styles */
+* {
+    scroll-behavior: smooth;
+}
+
+html {
+    color-scheme: light dark;
+}
+
+body {
+    font-family: sans-serif;
+    color: #1f2937;
+    background-color: #ffffff;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Dark Mode */
+body.dark-mode {
+    background-color: #0f172a;
+    color: #f3f4f6;
+}
+
+body.dark-mode a {
+    color: #93c5fd;
+}
+
+body.dark-mode a:hover {
+    color: #fff;
+}
+
+/* Gradient Background */
+.gradient-bg {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+/* Hover Scale Effect */
+.hover-scale {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hover-scale:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* Fade In Animation */
+.fade-in {
+    animation: fadeIn 0.6s ease-in;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Carousel Styles */
+.carousel-container {
+    position: relative;
+    overflow: hidden;
+    border-radius: 12px;
+}
+
+.carousel-item {
+    display: none;
+    animation: fadeIn 0.5s ease-in;
+}
+
+.carousel-item.active {
+    display: block;
+}
+
+/* Navigation Styles */
+nav {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+body.dark-mode nav {
+    background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+}
+
+nav a {
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #fcd34d;
+}
+
+nav button {
+    color: inherit;
+}
+
+/* Section Animations */
+section {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+    background-color: #ffffff;
+}
+
+section.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+body.dark-mode section {
+    background-color: #0f172a;
+    color: #f3f4f6;
+}
+
+section.bg-gray-50 {
+    background-color: #f9fafb;
+}
+
+body.dark-mode section.bg-gray-50 {
+    background-color: #1e293b;
+}
+
+/* Faculty Card Styles */
+.faculty-card {
+    background: white;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+body.dark-mode .faculty-card {
+    background: #1e293b;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3);
+}
+
+body.dark-mode .faculty-card p {
+    color: #cbd5e1;
+}
+
+.faculty-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.faculty-card img {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    height: auto;
+    object-fit: cover;
+}
+
+/* Course Card Styles */
+.course-card {
+    background: white;
+    border-radius: 0.5rem;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+body.dark-mode .course-card {
+    background: #1e293b;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3);
+}
+
+body.dark-mode .course-card p {
+    color: #cbd5e1;
+}
+
+.course-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.course-card-header {
+    padding: 1.5rem;
+    color: white;
+}
+
+.course-card-header.blue {
+    background: linear-gradient(to right, #3b82f6, #2563eb);
+}
+
+.course-card-header.purple {
+    background: linear-gradient(to right, #a855f7, #9333ea);
+}
+
+.course-card-header.indigo {
+    background: linear-gradient(to right, #6366f1, #4f46e5);
+}
+
+.course-card-header i {
+    font-size: 2.25rem;
+    margin-bottom: 1rem;
+}
+
+/* Certificate Card Styles */
+.cert-card {
+    border-radius: 0.5rem;
+    padding: 1.5rem;
+    color: white;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+}
+
+.cert-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.cert-card i {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.cert-card.green {
+    background: linear-gradient(to bottom right, #4ade80, #16a34a);
+}
+
+.cert-card.blue {
+    background: linear-gradient(to bottom right, #60a5fa, #2563eb);
+}
+
+.cert-card.red {
+    background: linear-gradient(to bottom right, #f87171, #dc2626);
+}
+
+.cert-card.yellow {
+    background: linear-gradient(to bottom right, #facc15, #ca8a04);
+}
+
+.cert-card.pink {
+    background: linear-gradient(to bottom right, #f472b6, #ec4899);
+}
+
+.cert-card.orange {
+    background: linear-gradient(to bottom right, #fb923c, #ea580c);
+}
+
+.cert-card.teal {
+    background: linear-gradient(to bottom right, #2dd4bf, #0d9488);
+}
+
+.cert-card.indigo {
+    background: linear-gradient(to bottom right, #818cf8, #4f46e5);
+}
+
+/* Gallery Card Styles */
+.gallery-card {
+    overflow: hidden;
+    border-radius: 0.5rem;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+body.dark-mode .gallery-card {
+    background: #1e293b;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3);
+}
+
+body.dark-mode .gallery-card p {
+    color: #cbd5e1;
+}
+
+.gallery-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.gallery-card img {
+    width: 100%;
+    height: 256px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.gallery-card:hover img {
+    transform: scale(1.1);
+}
+
+/* Form Input Styles */
+input, textarea {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border-radius: 0.5rem;
+    border: 1px solid #d1d5db;
+    background-color: #ffffff;
+    color: #1f2937;
+    transition: border-color 0.3s ease, background-color 0.3s ease;
+}
+
+body.dark-mode input,
+body.dark-mode textarea {
+    background-color: #1e293b;
+    color: #f3f4f6;
+    border-color: #475569;
+}
+
+input:focus, textarea:focus {
+    outline: none;
+    border-color: #9333ea;
+}
+
+/* Button Styles */
+button {
+    transition: all 0.3s ease;
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 0.75rem 2rem;
+    border-radius: 0.5rem;
+    font-weight: bold;
+}
+
+.btn-primary:hover {
+    box-shadow: 0 10px 20px rgba(102, 126, 234, 0.4);
+}
+
+/* Footer Styles */
+footer {
+    background-color: #111827;
+    color: white;
+}
+
+body.dark-mode footer {
+    background-color: #030712;
+}
+
+footer a {
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: white;
+}
+
+/* Mobile Menu Styles */
+#mobileNavMenu {
+    transition: all 0.3s ease;
+}
+
+/* Hero Section Icons */
+.hero-icon {
+    position: absolute;
+    opacity: 0.2;
+    font-size: 1.5rem;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .hero-icon {
+        display: none;
+    }
+    
+    .course-card-header i {
+        font-size: 2rem;
+    }
+    
+    .cert-card i {
+        font-size: 2.5rem;
+    }
+}
+
+/* Success Message Styles */
+.success-message {
+    position: fixed;
+    top: 5rem;
+    right: 1.25rem;
+    background-color: #10b981;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+    z-index: 50;
+    animation: slideIn 0.3s ease-out;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(400px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* Modal Styles */
+.modal {
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 50;
+}
+
+.modal-content {
+    background: white;
+    border-radius: 0.5rem;
+    padding: 2rem;
+    max-width: 28rem;
+    margin: auto;
+    box-shadow: 0 20px 25px rgba(0, 0, 0, 0.2);
+    animation: modalSlide 0.3s ease-out;
+}
+
+body.dark-mode .modal-content {
+    background: #1e293b;
+    color: #f3f4f6;
+}
+
+@keyframes modalSlide {
+    from {
+        transform: scale(0.95) translateY(-20px);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1) translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Utility Classes */
+.text-center {
+    text-align: center;
+}
+
+.text-white {
+    color: white;
+}
+
+.text-gray-600 {
+    color: #4b5563;
+}
+
+body.dark-mode .text-gray-600 {
+    color: #cbd5e1;
+}
+
+.text-gray-400 {
+    color: #9ca3af;
+}
+
+body.dark-mode .text-gray-400 {
+    color: #94a3b8;
+}
+
+.text-purple-600 {
+    color: #9333ea;
+}
+
+body.dark-mode .text-purple-600 {
+    color: #a78bfa;
+}
+
+.font-bold {
+    font-weight: bold;
+}
+
+.shadow-lg {
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+}
+
+.rounded-lg {
+    border-radius: 0.5rem;
+}
+
+/* Smooth Transitions */
+* {
+    transition-property: background-color, border-color, color, fill, stroke;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 200ms;
+}

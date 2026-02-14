@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Department of Computer Science - Vidyasagar University</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="font-sans text-gray-800">
+    <!-- Navigation Bar -->
+    <nav class="gradient-bg text-white sticky top-0 z-50 shadow-lg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center space-x-2">
+                    <i class="fas fa-university text-2xl"></i>
+                    <div>
+                        <h1 class="font-bold text-lg">Computer Science Department</h1>
+                        <p class="text-xs opacity-90">Vidyasagar University</p>
+                    </div>
+                </div>
+                
+                <button id="mobileMenuBtn" class="lg:hidden text-white">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+                
+                <ul id="navMenu" class="hidden lg:flex space-x-8">
+                    <li><a href="#home" class="hover:text-yellow-300 transition">Home</a></li>
+                    <li><a href="#about" class="hover:text-yellow-300 transition">About</a></li>
+                    <li><a href="#faculty" class="hover:text-yellow-300 transition">Faculty</a></li>
+                    <li><a href="#courses" class="hover:text-yellow-300 transition">Courses</a></li>
+                    <li><a href="#certificates" class="hover:text-yellow-300 transition">Certificates</a></li>
+                    <li><a href="#gallery" class="hover:text-yellow-300 transition">Gallery</a></li>
+                    <li><a href="#contact" class="hover:text-yellow-300 transition">Contact</a></li>
+                    <li>
+                        <button id="themeToggle" class="hover:text-yellow-300 transition" title="Toggle Theme">
+                            <i class="fas fa-moon"></i>
+                        </button>
+                    </li>
+                </ul>
+            </div>
+            
+            <!-- Mobile Menu -->
+            <div id="mobileNavMenu" class="hidden lg:hidden pb-4">
+                <a href="#home" class="block py-2 hover:text-yellow-300">Home</a>
+                <a href="#about" class="block py-2 hover:text-yellow-300">About</a>
+                <a href="#faculty" class="block py-2 hover:text-yellow-300">Faculty</a>
+                <a href="#courses" class="block py-2 hover:text-yellow-300">Courses</a>
+                <a href="#certificates" class="block py-2 hover:text-yellow-300">Certificates</a>
+                <a href="#gallery" class="block py-2 hover:text-yellow-300">Gallery</a>
+                <a href="#contact" class="block py-2 hover:text-yellow-300">Contact</a>
+                <button id="mobileThemeToggle" class="block py-2 hover:text-yellow-300 w-full text-left" title="Toggle Theme">
+                    <i class="fas fa-moon mr-2"></i>Dark Mode
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="gradient-bg text-white py-20 relative overflow-hidden">
+        <div class="absolute inset-0 opacity-20">
+            <i class="fas fa-code absolute top-10 left-10 text-6xl"></i>
+            <i class="fas fa-database absolute bottom-20 right-20 text-5xl"></i>
+            <i class="fas fa-server absolute top-1/2 right-10 text-4xl"></i>
+        </div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+            <h2 class="text-5xl font-bold mb-4 fade-in">Department of Computer Science</h2>
+            <p class="text-xl opacity-90 mb-8">Vidyasagar University - Nurturing Digital Innovators</p>
+            <p class="text-lg max-w-2xl mx-auto opacity-80 mb-8">
+                Empowering students with cutting-edge knowledge in computer science, software development, 
+                and emerging technologies for a digital future.
+            </p>
+            <button class="bg-yellow-400 text-purple-900 px-8 py-3 rounded-lg font-bold hover:bg-yellow-300 transition">
+                Explore More
+            </button>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-16 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-4xl font-bold text-center mb-12">About Our Department</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=500&h=400&fit=crop" 
+                         alt="Department Campus" class="rounded-lg shadow-lg">
+                </div>
+                
+                <div>
+                    <h3 class="text-2xl font-bold mb-4">Excellence in Computer Science Education</h3>
+                    <p class="text-gray-600 mb-4">
+                        Our department is committed to providing world-class education in computer science, 
+                        equipping students with the skills and knowledge needed in the rapidly evolving tech industry.
+                    </p>
+                    <ul class="space-y-3">
+                        <li class="flex items-center"><i class="fas fa-check text-green-500 mr-3"></i> Modern Curriculum</li>
+                        <li class="flex items-center"><i class="fas fa-check text-green-500 mr-3"></i> Experienced Faculty</li>
+                        <li class="flex items-center"><i class="fas fa-check text-green-500 mr-3"></i> State-of-the-Art Lab</li>
+                        <li class="flex items-center"><i class="fas fa-check text-green-500 mr-3"></i> Industry Partnerships</li>
+                        <li class="flex items-center"><i class="fas fa-check text-green-500 mr-3"></i> Research Opportunities</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Faculty Section -->
+    <section id="faculty" class="py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-4xl font-bold text-center mb-12">Meet Our Faculty</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Faculty Member 1 -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-lg hover-scale">
+                    <img src="/pic/bpj.jpg" 
+                         alt="Faculty" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <h3 class="text-xl font-bold mb-1">Prof. (Dr.) Biswapati Jana</h3>
+                        <p class="text-purple-600 font-semibold mb-2">Professor & HOD</p>
+                        <p class="text-gray-600 text-sm mb-3">Image Processing</p>
+                        <div class="flex space-x-3">
+                            <a href="mailto:biswapati.jana@mail.vidyasagar.ac.in" class="text-purple-600 hover:text-purple-800"><i class="fas fa-envelope"></i></a>
+                            <a href="#" class="text-purple-600 hover:text-purple-800"><i class="fas fa-phone"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Faculty Member 2 -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-lg hover-scale">
+                    <img src="/pic/sp.jpg" 
+                         alt="Faculty" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <h3 class="text-xl font-bold mb-1">Mrs. Sabari Pramanik</h3>
+                        <p class="text-purple-600 font-semibold mb-2">Assistant Professor</p>
+                        <p class="text-gray-600 text-sm mb-3">Artificial Inteligence</p>
+                        <div class="flex space-x-3">
+                            <a href="#" class="text-purple-600 hover:text-purple-800"><i class="fas fa-envelope"></i></a>
+                            <a href="#" class="text-purple-600 hover:text-purple-800"><i class="fas fa-phone"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Faculty Member 3 -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-lg hover-scale">
+                    <img src="/pic/um.jpg" 
+                         alt="Faculty" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <h3 class="text-xl font-bold mb-1">Dr. Uttam Kumar Mondal</h3>
+                        <p class="text-purple-600 font-semibold mb-2">Assistant Professor</p>
+                        <p class="text-gray-600 text-sm mb-3">Audio Processing</p>
+                        <div class="flex space-x-3">
+                            <a href="#" class="text-purple-600 hover:text-purple-800"><i class="fas fa-envelope"></i></a>
+                            <a href="#" class="text-purple-600 hover:text-purple-800"><i class="fas fa-phone"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Faculty Member 4 -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-lg hover-scale">
+                    <img src="/pic/bp.jpg" 
+                         alt="Faculty" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <h3 class="text-xl font-bold mb-1">Dr. Bachchu Paul</h3>
+                        <p class="text-purple-600 font-semibold mb-2">Assistant Professor</p>
+                        <p class="text-gray-600 text-sm mb-3">AI & ML Expert</p>
+                        <div class="flex space-x-3">
+                            <a href="#" class="text-purple-600 hover:text-purple-800"><i class="fas fa-envelope"></i></a>
+                            <a href="#" class="text-purple-600 hover:text-purple-800"><i class="fas fa-phone"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Faculty Member 5 -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-lg hover-scale">
+                    <img src="/pic/un.jpg" 
+                         alt="Faculty" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <h3 class="text-xl font-bold mb-1">Dr. Utpal Nandi</h3>
+                        <p class="text-purple-600 font-semibold mb-2">Assistant Professor</p>
+                        <p class="text-gray-600 text-sm mb-3">Deep Learning</p>
+                        <div class="flex space-x-3">
+                            <a href="#" class="text-purple-600 hover:text-purple-800"><i class="fas fa-envelope"></i></a>
+                            <a href="#" class="text-purple-600 hover:text-purple-800"><i class="fas fa-phone"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Faculty Member 6 -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-lg hover-scale">
+                    <img src="/pic/pg.jpg" 
+                         alt="Faculty" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <h3 class="text-xl font-bold mb-1">Mrs. Payel Guria</h3>
+                        <p class="text-purple-600 font-semibold mb-2">Assistant Professor</p>
+                        <p class="text-gray-600 text-sm mb-3">Computer Graphics</p>
+                        <div class="flex space-x-3">
+                            <a href="#" class="text-purple-600 hover:text-purple-800"><i class="fas fa-envelope"></i></a>
+                            <a href="#" class="text-purple-600 hover:text-purple-800"><i class="fas fa-phone"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Faculty Member 7 -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-lg hover-scale">
+                    <img src="/pic/pc.jpg" 
+                         alt="Faculty" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <h3 class="text-xl font-bold mb-1">Dr. Partha Chowdhuri</h3>
+                        <p class="text-purple-600 font-semibold mb-2">Assistant Professor</p>
+                        <p class="text-gray-600 text-sm mb-3">Data Science</p>
+                        <div class="flex space-x-3">
+                            <a href="#" class="text-purple-600 hover:text-purple-800"><i class="fas fa-envelope"></i></a>
+                            <a href="#" class="text-purple-600 hover:text-purple-800"><i class="fas fa-phone"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Faculty Member 8 -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-lg hover-scale">
+                    <img src="/pic/ss.png" 
+                         alt="Faculty" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <h3 class="text-xl font-bold mb-1">Dr. Soamdeep Singha</h3>
+                        <p class="text-purple-600 font-semibold mb-2">Assistant Professor</p>
+                        <p class="text-gray-600 text-sm mb-3">Ad-hoc Network</p>
+                        <div class="flex space-x-3">
+                            <a href="#" class="text-purple-600 hover:text-purple-800"><i class="fas fa-envelope"></i></a>
+                            <a href="#" class="text-purple-600 hover:text-purple-800"><i class="fas fa-phone"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Faculty Member 9 -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-lg hover-scale">
+                    <img src="/pic/DB.png" 
+                         alt="Faculty" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <h3 class="text-xl font-bold mb-1">Mr. Debkumar Bera</h3>
+                        <p class="text-purple-600 font-semibold mb-2">Assistant Professor</p>
+                        <p class="text-gray-600 text-sm mb-3">Automata, Computer Networks</p>
+                        <div class="flex space-x-3">
+                            <a href="#" class="text-purple-600 hover:text-purple-800"><i class="fas fa-envelope"></i></a>
+                            <a href="#" class="text-purple-600 hover:text-purple-800"><i class="fas fa-phone"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Courses Section -->
+    <section id="courses" class="py-16 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-4xl font-bold text-center mb-12">Academic Programs</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- B.Tech -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden hover-scale">
+                    <div class="bg-gradient-to-r from-blue-500 to-blue-600 text-white p-6">
+                        <i class="fas fa-graduation-cap text-4xl mb-4"></i>
+                        <h3 class="text-2xl font-bold">M.Tech in Computer Science with AI</h3>
+                    </div>
+                    <div class="p-6">
+                        <p class="text-gray-600 mb-4">
+                            2 year postgraduate program focusing on core CS concepts, programming, and software engineering.
+                        </p>
+                        <ul class="space-y-2 mb-6">
+                            <li class="flex items-center"><i class="fas fa-arrow-right text-blue-500 mr-2"></i>Advanced Algorithms</li>
+                            <li class="flex items-center"><i class="fas fa-arrow-right text-blue-500 mr-2"></i>Mathematical Foundations</li>
+                            <li class="flex items-center"><i class="fas fa-arrow-right text-blue-500 mr-2"></i>Machine Learning and Data Science</li>
+                            <li class="flex items-center"><i class="fas fa-arrow-right text-blue-500 mr-2"></i>Deep Learning</li>
+                            <li class="flex items-center"><i class="fas fa-arrow-right text-blue-500 mr-2"></i>Project Work</li>
+                        </ul>
+                        <button class="w-full bg-blue-500 text-white py-2 rounded hover:bg-blue-600 transition">Learn More</button>
+                    </div>
+                </div>
+
+                <!-- M.Tech -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden hover-scale">
+                    <div class="bg-gradient-to-r from-purple-500 to-purple-600 text-white p-6">
+                        <i class="fas fa-book text-4xl mb-4"></i>
+                        <h3 class="text-2xl font-bold">M.Sc in Computer Science</h3>
+                    </div>
+                    <div class="p-6">
+                        <p class="text-gray-600 mb-4">
+                            2-year postgraduate program with specialization in advanced computing technologies.
+                        </p>
+                        <ul class="space-y-2 mb-6">
+                            <li class="flex items-center"><i class="fas fa-arrow-right text-purple-500 mr-2"></i>Cloud Computing</li>
+                            <li class="flex items-center"><i class="fas fa-arrow-right text-purple-500 mr-2"></i>Big Data Analytics</li>
+                            <li class="flex items-center"><i class="fas fa-arrow-right text-purple-500 mr-2"></i>Research Projects</li>
+                            <li class="flex items-center"><i class="fas fa-arrow-right text-purple-500 mr-2"></i>Advanced AI/ML</li>
+                            <li class="flex items-center"><i class="fas fa-arrow-right text-purple-500 mr-2"></i>Thesis Work</li>
+                        </ul>
+                        <button class="w-full bg-purple-500 text-white py-2 rounded hover:bg-purple-600 transition">Learn More</button>
+                    </div>
+                </div>
+
+                <!-- BCA -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden hover-scale">
+                    <div class="bg-gradient-to-r from-indigo-500 to-indigo-600 text-white p-6">
+                        <i class="fas fa-laptop text-4xl mb-4"></i>
+                        <h3 class="text-2xl font-bold">Master of Computer Applications (MCA)</h3>
+                    </div>
+                    <div class="p-6">
+                        <p class="text-gray-600 mb-4">
+                            3-year undergraduate program focused on application development and IT skills.
+                        </p>
+                        <ul class="space-y-2 mb-6">
+                            <li class="flex items-center"><i class="fas fa-arrow-right text-indigo-500 mr-2"></i>Programming Languages</li>
+                            <li class="flex items-center"><i class="fas fa-arrow-right text-indigo-500 mr-2"></i>Software Development</li>
+                            <li class="flex items-center"><i class="fas fa-arrow-right text-indigo-500 mr-2"></i>Mobile Apps</li>
+                            <li class="flex items-center"><i class="fas fa-arrow-right text-indigo-500 mr-2"></i>IT Management</li>
+                            <li class="flex items-center"><i class="fas fa-arrow-right text-indigo-500 mr-2"></i>Internships</li>
+                        </ul>
+                        <button class="w-full bg-indigo-500 text-white py-2 rounded hover:bg-indigo-600 transition">Learn More</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certificate Courses Section -->
+    <section id="certificates" class="py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-4xl font-bold text-center mb-12">Certificate Programs</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Certificate 1 -->
+                <div class="bg-gradient-to-br from-green-400 to-green-600 rounded-lg p-6 text-white hover-scale cursor-pointer">
+                    <i class="fas fa-python text-5xl mb-4"></i>
+                    <h3 class="text-xl font-bold mb-2">AI for All</h3>
+                    <p class="text-sm opacity-90 mb-4">Duration: 6 Months</p>
+                    <p class="text-sm opacity-80">Master AI for real life applications</p>
+                </div>
+
+                <!-- Certificate 2 -->
+                <div class="bg-gradient-to-br from-blue-400 to-blue-600 rounded-lg p-6 text-white hover-scale cursor-pointer">
+                    <i class="fas fa-react text-5xl mb-4"></i>
+                    <h3 class="text-xl font-bold mb-2">Agile Software Development</h3>
+                    <p class="text-sm opacity-90 mb-4">Duration: 6 Months</p>
+                    <p class="text-sm opacity-80">Frontend and backend technologies</p>
+                </div>
+
+                <!-- Certificate 3 -->
+                <div class="bg-gradient-to-br from-red-400 to-red-600 rounded-lg p-6 text-white hover-scale cursor-pointer">
+                    <i class="fas fa-database text-5xl mb-4"></i>
+                    <h3 class="text-xl font-bold mb-2">Office Automation using AI</h3>
+                    <p class="text-sm opacity-90 mb-4">Duration: 8 weeks</p>
+                    <p class="text-sm opacity-80">Learn to automate office tasks using AI tools and techniques</p>
+                </div>
+
+                <!-- Certificate 4 -->
+                <div class="bg-gradient-to-br from-yellow-400 to-yellow-600 rounded-lg p-6 text-white hover-scale cursor-pointer">
+                    <i class="fas fa-shield-alt text-5xl mb-4"></i>
+                    <h3 class="text-xl font-bold mb-2">Cybersecurity Basics</h3>
+                    <p class="text-sm opacity-90 mb-4">Duration: 5 weeks</p>
+                    <p class="text-sm opacity-80">Network security and ethical hacking fundamentals</p>
+                </div>
+            </div>
+
+            <div class="text-center mt-12">
+                <button class="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-3 rounded-lg font-bold hover:shadow-lg transition">
+                    Enroll Now
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Photo Gallery Section -->
+    <section id="gallery" class="py-16 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-4xl font-bold text-center mb-12">Photo Gallery</h2>
+            
+            <!-- Main Carousel -->
+            <div class="mb-12">
+                <div class="carousel-container">
+                    <!-- Carousel Item 1 -->
+                    <div class="carousel-item active">
+                        <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=1000&h=400&fit=crop" 
+                             alt="Campus Life" class="w-full h-96 object-cover">
+                    </div>
+                    
+                    <!-- Carousel Item 2 -->
+                    <div class="carousel-item">
+                        <img src="https://images.unsplash.com/photo-1516321318423-f06bb223504b?w=1000&h=400&fit=crop" 
+                             alt="Lab Facility" class="w-full h-96 object-cover">
+                    </div>
+                    
+                    <!-- Carousel Item 3 -->
+                    <div class="carousel-item">
+                        <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=1000&h=400&fit=crop" 
+                             alt="Student Workshop" class="w-full h-96 object-cover">
+                    </div>
+                    
+                    <!-- Carousel Item 4 -->
+                    <div class="carousel-item">
+                        <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=1000&h=400&fit=crop" 
+                             alt="Department Event" class="w-full h-96 object-cover">
+                    </div>
+                </div>
+                
+                <!-- Carousel Controls -->
+                <div class="flex justify-center items-center gap-4 mt-6">
+                    <button id="prevBtn" class="bg-purple-600 text-white p-3 rounded-full hover:bg-purple-700">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <div id="carouselIndicators" class="flex gap-2"></div>
+                    <button id="nextBtn" class="bg-purple-600 text-white p-3 rounded-full hover:bg-purple-700">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Photo Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="overflow-hidden rounded-lg shadow-lg hover-scale cursor-pointer group">
+                    <img src="https://images.unsplash.com/photo-1516321318423-f06bb223504b?w=400&h=300&fit=crop" 
+                         alt="Lab" class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-300">
+                    <div class="p-4 bg-white">
+                        <h3 class="font-bold text-lg">Computer Lab</h3>
+                        <p class="text-gray-600 text-sm">State-of-the-art laboratory facilities</p>
+                    </div>
+                </div>
+
+                <div class="overflow-hidden rounded-lg shadow-lg hover-scale cursor-pointer group">
+                    <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=400&h=300&fit=crop" 
+                         alt="Workshop" class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-300">
+                    <div class="p-4 bg-white">
+                        <h3 class="font-bold text-lg">Workshop Session</h3>
+                        <p class="text-gray-600 text-sm">Hands-on learning experiences</p>
+                    </div>
+                </div>
+
+                <div class="overflow-hidden rounded-lg shadow-lg hover-scale cursor-pointer group">
+                    <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=400&h=300&fit=crop" 
+                         alt="Campus" class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-300">
+                    <div class="p-4 bg-white">
+                        <h3 class="font-bold text-lg">Campus View</h3>
+                        <p class="text-gray-600 text-sm">Beautiful campus environment</p>
+                    </div>
+                </div>
+
+                <div class="overflow-hidden rounded-lg shadow-lg hover-scale cursor-pointer group">
+                    <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=400&h=300&fit=crop" 
+                         alt="Seminar" class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-300">
+                    <div class="p-4 bg-white">
+                        <h3 class="font-bold text-lg">Seminar</h3>
+                        <p class="text-gray-600 text-sm">Expert talks and discussions</p>
+                    </div>
+                </div>
+
+                <div class="overflow-hidden rounded-lg shadow-lg hover-scale cursor-pointer group">
+                    <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=400&h=300&fit=crop" 
+                         alt="Event" class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-300">
+                    <div class="p-4 bg-white">
+                        <h3 class="font-bold text-lg">Annual Fest</h3>
+                        <p class="text-gray-600 text-sm">Department celebrations and events</p>
+                    </div>
+                </div>
+
+                <div class="overflow-hidden rounded-lg shadow-lg hover-scale cursor-pointer group">
+                    <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=400&h=300&fit=crop" 
+                         alt="Project" class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-300">
+                    <div class="p-4 bg-white">
+                        <h3 class="font-bold text-lg">Student Projects</h3>
+                        <p class="text-gray-600 text-sm">Innovation and creativity showcase</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Statistics Section -->
+    <section class="gradient-bg text-white py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 text-center">
+                <div>
+                    <h3 class="text-4xl font-bold mb-2">500+</h3>
+                    <p class="text-lg">Active Students</p>
+                </div>
+                <div>
+                    <h3 class="text-4xl font-bold mb-2">12</h3>
+                    <p class="text-lg">Faculty Members</p>
+                </div>
+                <div>
+                    <h3 class="text-4xl font-bold mb-2">15+</h3>
+                    <p class="text-lg">Industry Partners</p>
+                </div>
+                <div>
+                    <h3 class="text-4xl font-bold mb-2">98%</h3>
+                    <p class="text-lg">Placement Rate</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-4xl font-bold text-center mb-12">Contact Us</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                <!-- Contact Form -->
+                <div>
+                    <h3 class="text-2xl font-bold mb-6">Send us a Message</h3>
+                    <form id="contactForm" class="space-y-4">
+                        <input type="text" placeholder="Your Name" required 
+                               class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:border-purple-600">
+                        <input type="email" placeholder="Your Email" required 
+                               class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:border-purple-600">
+                        <input type="text" placeholder="Subject" required 
+                               class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:border-purple-600">
+                        <textarea placeholder="Your Message" rows="5" required 
+                                  class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:border-purple-600"></textarea>
+                        <button type="submit" class="w-full gradient-bg text-white py-3 rounded-lg font-bold hover:shadow-lg transition">
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+
+                <!-- Contact Information -->
+                <div>
+                    <h3 class="text-2xl font-bold mb-6">Get in Touch</h3>
+                    
+                    <div class="space-y-6">
+                        <div class="flex items-start">
+                            <i class="fas fa-map-marker-alt text-purple-600 text-2xl mt-1 mr-4"></i>
+                            <div>
+                                <h4 class="font-bold text-lg mb-1">Address</h4>
+                                <p class="text-gray-600">
+                                    Department of Computer Science<br>
+                                    Vidyasagar University<br>
+                                    Medinipur, West Bengal, India
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start">
+                            <i class="fas fa-phone text-purple-600 text-2xl mt-1 mr-4"></i>
+                            <div>
+                                <h4 class="font-bold text-lg mb-1">Phone</h4>
+                                <p class="text-gray-600">
+                                    +91-XXXX-XXX-XXX<br>
+                                    Office: +91-XXXX-XXX-XXX
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start">
+                            <i class="fas fa-envelope text-purple-600 text-2xl mt-1 mr-4"></i>
+                            <div>
+                                <h4 class="font-bold text-lg mb-1">Email</h4>
+                                <p class="text-gray-600">
+                                    mail@vucs.net
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start">
+                            <i class="fas fa-clock text-purple-600 text-2xl mt-1 mr-4"></i>
+                            <div>
+                                <h4 class="font-bold text-lg mb-1">Office Hours</h4>
+                                <p class="text-gray-600">
+                                    Monday - Friday: 11:00 AM - 5:00 PM<br>
+                                   
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="mt-8">
+                            <h4 class="font-bold text-lg mb-3">Follow Us</h4>
+                            <div class="flex space-x-4">
+                                <a href="https://facebook.com" class="bg-purple-600 text-white p-3 rounded-full hover:bg-purple-700 transition">
+                                    <i class="fab fa-facebook-f"></i>
+                                </a>
+                                <a href="#" class="bg-purple-600 text-white p-3 rounded-full hover:bg-purple-700 transition">
+                                    <i class="fab fa-twitter"></i>
+                                </a>
+                                <a href="#" class="bg-purple-600 text-white p-3 rounded-full hover:bg-purple-700 transition">
+                                    <i class="fab fa-linkedin-in"></i>
+                                </a>
+                                <a href="#" class="bg-purple-600 text-white p-3 rounded-full hover:bg-purple-700 transition">
+                                    <i class="fab fa-instagram"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+                <div>
+                    <h4 class="text-lg font-bold mb-4">About Department</h4>
+                    <p class="text-gray-400 text-sm">
+                        Leading the way in computer science education and research at Vidyasagar University.
+                    </p>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Quick Links</h4>
+                    <ul class="text-gray-400 text-sm space-y-2">
+                        <li><a href="#" class="hover:text-white transition">Admissions</a></li>
+                        <li><a href="#" class="hover:text-white transition">Library</a></li>
+                        <li><a href="#" class="hover:text-white transition">Placements</a></li>
+                        <li><a href="#" class="hover:text-white transition">Research</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Important Links</h4>
+                    <ul class="text-gray-400 text-sm space-y-2">
+                        <li><a href="#" class="hover:text-white transition">University Website</a></li>
+                        <li><a href="#" class="hover:text-white transition">Student Portal</a></li>
+                        <li><a href="#" class="hover:text-white transition">Downloads</a></li>
+                        <li><a href="#" class="hover:text-white transition">Feedback</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <hr class="border-gray-700 mb-8">
+
+            <div class="text-center text-gray-400 text-sm">
+                <p>&copy; 2024 Department of Computer Science, Vidyasagar University. All rights reserved.</p>
+                <p class="mt-2">Designed with <i class="fas fa-heart text-red-500"></i> for Excellence in Education</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
